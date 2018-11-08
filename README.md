@@ -13,7 +13,7 @@ siguiente estructura:
 
 |         Campo          |             Tipo            |
 |:----------------------:|:---------------------------:|
-| fechaGeneración String | formato DD/MM/YYYY HH:mm:ss |
+| fechaGeneración  | String formato DD/MM/YYYY HH:mm:ss |
 |     IdDispositivo      |             Int             |
 |      temperatura       |            Number           |
 |        humedad         |            Number           |
