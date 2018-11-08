@@ -1,5 +1,6 @@
 package com.practica.jms.modelo;
 
+import com.practica.jms.main.Main;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
@@ -65,6 +66,7 @@ public class Consumidor {
 
             try {
                 TextMessage messageTexto = (TextMessage) message;
+                Main.enviarMensaje(messageTexto.getText());
                 System.out.println("El mensaje de texto recibido: " + messageTexto.getText()+" - "+new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date()));
             }catch(Exception ex){
                 ex.printStackTrace();

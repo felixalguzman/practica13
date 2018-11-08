@@ -1,5 +1,6 @@
 package com.practica.jms.modelo;
 
+import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
 
@@ -12,8 +13,11 @@ public class Data {
 
     public Data() {
 //         DD/MM/YYYY HH:mm:ss
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("DD/MM/YYYY HH:mm:ss");
+        Date date = new Date();
+
         setIdDispositivo((int) (Math.random() * 100) + 1);
-        setFecha(Date.from(Instant.now()).toString());
+        setFecha(simpleDateFormat.format(date));
         setHumedad((long) (Math.random() * 100) + 1);
         setTemperatura((long) (Math.random() * 100) + 1);
     }
